@@ -68,7 +68,7 @@ interface FastEthernet0/0.10
  ip address 192.168.10.1 255.255.255.0
 ```
 
-> ※ 動作確認のスクリーンショットをここに貼り付けてください
+![インターフェース確認](screenshots/01_interface_brief.png)
 
 ---
 
@@ -94,7 +94,7 @@ ip dhcp pool VLAN20
  dns-server 192.168.20.15
 ```
 
-> ※ show ip dhcp bindingのスクリーンショットをここに貼り付けてください
+![DHCP払い出し確認](screenshots/04_dhcp_binding.png)
 
 ---
 
@@ -108,7 +108,7 @@ Server0にDNSとWebサーバーを設定しました。
 - DNS：`server.local` → `192.168.20.15` のAレコードを登録
 - HTTP：社内ポータルページを作成
 
-> ※ ブラウザでserver.localにアクセスしている画面をここに貼り付けてください
+![Webアクセス確認](screenshots/10_web_browser.png)
 
 ---
 
@@ -147,7 +147,8 @@ ip access-list extended VLAN10-TO-VLAN20
  30 permit ip any any
 ```
 
-> ※ show ip access-listsのスクリーンショットをここに貼り付けてください
+![ACL確認](screenshots/05_access_lists.png)
+![VLAN間アクセス拒否](screenshots/09_ping_denied.png)
 
 ---
 
@@ -166,8 +167,8 @@ ip access-list standard NAT-INSIDE
 ip nat inside source list NAT-INSIDE interface FastEthernet0/1 overload
 ```
 
-> ※ show ip nat translationsのスクリーンショットをここに貼り付けてください
-
+![NAT統計](screenshots/06_nat_statistics.png)
+![NAT変換テーブル](screenshots/12_nat_translations.png)
 ---
 
 ## セキュリティ設計の考え方
