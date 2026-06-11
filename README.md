@@ -120,8 +120,8 @@ IPアドレスではなくドメイン名でサーバーにアクセスできる
 Server0にDNSとWebサーバーを設定しました。
 
 **設定内容**
-- DNS：`server.local` → `192.168.20.15` のAレコードを登録
-- HTTP：社内ポータルページを作成
+- DNSサーバにAレコードを登録し、server.local を 192.168.20.15 に名前解決できるよう設定
+- HTTPサーバを構築し、http://server.local/welcome.html で社内ポータルへアクセス可能
 
 ![Webアクセス確認](screenshots/10_web_browser.png)
 
